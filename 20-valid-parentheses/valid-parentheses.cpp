@@ -7,15 +7,12 @@ public:
             if (ch == '(' || ch == '{' || ch == '[') {
                 st.push(ch);
             } else {
-                if (st.empty()) {
-                    return false;
-                }
+                if (st.empty()) return false;
 
                 if ((ch == ')' && st.top() != '(') ||
                     (ch == '}' && st.top() != '{') ||
-                    (ch == ']' && st.top() != '[')) {
+                    (ch == ']' && st.top() != '['))
                     return false;
-                }
 
                 st.pop();
             }
