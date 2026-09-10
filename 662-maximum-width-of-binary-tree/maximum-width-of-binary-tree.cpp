@@ -19,7 +19,6 @@ public:
                 auto [node, index] = q.front();
                 q.pop();
 
-                // Normalize indices to avoid overflow
                 index -= first;
 
                 last = index;
